@@ -1,16 +1,64 @@
-html,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	background: linear-gradient(to bottom right, #5e5e60, #444446);
+	color: var(--fontLight);
+}
+
+:root {
+	--fontLight: #e5e5e5;
+	--fontGray: #6d6c6c;
+	--gold: #e1cc8f;
+	--fontGoldCream: #d2be8d;
+	--watermark: #e1cc8f1f;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	text-decoration: none;
+	color: var(--fontGray);
+}
+a:hover {
+	color: var(--fontLight);
 }
 
-* {
-  box-sizing: border-box;
+/* nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 60px;
+	width: 100%;
 }
+ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+li {
+	font-size: 0.9rem;
+	padding: 30px;
+}
+li a {
+	color: var(--fontLight);
+	padding: 8px 20px;
+	border: 1px solid transparent;
+}
+li a:hover {
+	padding: 8px 20px;
+	color: var(--gold);
+	border: 1px solid var(--fontGray);
+	border-radius: 20px;
+	box-shadow: 5px 5px 20px black, -5px -5px 10px dimgray;
+}
+li a:active {
+	border: 1px solid var(--fontGray);
+	border-radius: 20px;
+	box-shadow: -5px -5px 20px black, 5px 5px 10px dimgray;
+} */
