@@ -1,99 +1,45 @@
-// import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import styles from './nav.module.scss'
 import { useRouter } from 'next/router'
-import classnames from 'classnames'
-
 import Link from '../components/Link'
 
 
 const Navbar = () => {
-	// const router = useRouter();
-	// function isActive(route) {
-	// 	console.log(route, router.pathname)
-	// 	if (route === router.pathname) {
-	// 		console.log("IF")
-	// 		return "active"
-	// 	} else ""
-	// }
+	const router = useRouter();
+	function isActive(route) {
+		console.log(route, router.pathname)
+		if (route === router.pathname) {
+			return "active"
+		} else ""
+	}
 	return (
-		<div>
-			<nav>
+		<div className={styles.header}>
+			<nav className={styles.navbar}>
 				<div>
 					<Link href="/">
-						<a>
+						<a className={styles.logo}>
 							Ga//uPPo
 						</a>
 					</Link>
 				</div>
-				<ul>
-					<li>
-						<Link href="/desinger">
-							<a>Designer</a>
-						</Link>
-					</li>
+				<ul className={styles.unorderedList}>
 					<li>
 						<Link href="/gallery">
-							<a>Gallery</a>
+							<a className={styles.link}>Gallery</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/more">
-							<a>More</a>
+							<a className={styles.link}>More</a>
 						</Link>
 					</li>
+
 					<li>
-							<Link href="/about">
-								<a>About me</a>
-							</Link>
+						<Link href="/about">
+							<a className={isActive("/about") ? styles.active : styles.link}>About</a>
+						</Link>
 					</li>
 				</ul>
 			</nav>
-			<style jsx>
-				{`
-				nav {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					padding: 30px 60px;
-					width: 100%;
-				}
-				ul {
-					list-style-type: none;
-					display: flex;
-					justify-content: flex-end;
-					align-items: center;
-				}
-				li {
-					font-size: 0.9rem;
-					padding: 30px;
-				}
-				li a {
-					color: var(--fontLight);
-					padding: 8px 20px;
-					border: 1px solid transparent;
-				}
-				li a:hover {
-					padding: 8px 20px;
-					color: var(--gold);
-					border: 1px solid var(--fontGray);
-					border-radius: 20px;
-					box-shadow: 5px 5px 20px black, -5px -5px 10px dimgray;
-				}
-				li a:active {
-					color: var(--gold);
-					border: 1px solid var(--fontGray);
-					border-radius: 20px;
-					box-shadow: -5px -5px 20px black, 5px 5px 10px dimgray;
-				}
-				li a:focus {
-					outline: transparent !important;
-					color: var(--gold);
-					border: 1px solid var(--fontGray);
-					border-radius: 20px;
-					box-shadow: -5px -5px 20px black, 5px 5px 10px dimgray;
-				}`
-				}
-			</style>
 		</div>
 	)
 }
