@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../components/jumpLetterStyles.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
