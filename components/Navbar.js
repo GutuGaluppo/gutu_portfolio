@@ -28,8 +28,8 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href="/more">
-							<a className={styles.link}>More</a>
+						<Link href="/pens">
+							<a className={styles.link}>Pens</a>
 						</Link>
 					</li>
 
