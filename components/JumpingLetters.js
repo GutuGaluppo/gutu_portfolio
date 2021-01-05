@@ -13,11 +13,11 @@ export default function JumpingLettersFunc() {
 		// console.log(letters)
 
 		let scl = [];
-		let avoColorList = [];
+		let goldColorList = [];
 
 		letters.forEach(() => {
 			scl.push(random(10, 20));
-			avoColorList.push([random(30, 60), random(0, 10), random(200, 30)]);
+			goldColorList.push([random(30, 60), random(0, 10), random(200, 30)]);
 		});
 
 		const setColor = (el, r, g, b) => {
@@ -27,10 +27,6 @@ export default function JumpingLettersFunc() {
 		letters.forEach((letter, index) => {
 			letter.addEventListener('mouseenter', () => {
 				letter.classList.add('isJumping');
-
-				// const newColorValueR = (avoColorList[index][0]);
-				// const newColorValueG = (avoColorList[index][1]);
-				// const newColorValueB = (avoColorList[index][2]);
 
 				setColor(letter, 159, 145, 91);
 
@@ -104,6 +100,7 @@ export default function JumpingLettersFunc() {
 					font-family: "Georgia";
 					font-style: italic;
 					font-weight: 700;
+					color: rgb(74,74,75);
 					display: inline-block;
 					line-height: 10vw;
 					letter-spacing: -0.5vw;
