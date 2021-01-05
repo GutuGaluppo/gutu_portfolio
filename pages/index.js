@@ -11,7 +11,7 @@ export default function Index() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<div>
-				{/* <Navbar /> */}
+				<Navbar />
 				<Home />
 			</div>
 		</div>
