@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import JumpingLetters from '../components/JumpingLetters'
+import JumpingLetters from './jumpping-letters/JumppingLetters'
 
 export default function Home() {
 	return (

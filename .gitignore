@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+# npm run dev to start

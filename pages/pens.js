@@ -1,10 +1,10 @@
 import Layout from '../components/layout'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 
 const Pens = () => {
 	return (
 		<Layout>
-			<Navbar/>
+			<Navbar />
 			<div class="cp_embed_wrapper iframe">
 				<iframe
 					height="400px"
@@ -25,21 +25,19 @@ const Pens = () => {
 				on <a href='https://codepen.io'>CodePen</a>.
 			</iframe>
 			</div>
-			<script jsx>
-				{`
-					.cp_embed_wrapper {
-						overflow: hidden;										
-						resize: both;
-						background: white;
-						padding-bottom: 10px;
-						height: 400px;
-						width: 600px;
-					}
-					.cp_embed_wrapper iframe {
-						height: 100% !important;
-					}
-				`}
-			</script>
+			<script jsx>{`
+				.cp_embed_wrapper {
+					overflow: hidden;										
+					resize: both;
+					background: white;
+					padding-bottom: 10px;
+					height: 400px;
+					width: 600px;
+				}
+				.cp_embed_wrapper iframe {
+					height: 100% !important;
+				}
+			`}</script>
 		</Layout >
 	)
 }
